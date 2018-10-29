@@ -17,21 +17,19 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    while (true) {
-      setTimeout(() => {
-        this.getParams();
-      }, 3000);
-    }
+    this.getParams();
+    setInterval(() => {
+      this.getParams();
+    }, 25000);
   }
 
   getParams() {
     let dataResp: any;
     this.limitService.getLimits().subscribe(
       data => {
-        dataResp = JSON.stringify(data);
-        console.log(dataResp);
-        this.limit = dataResp.soe_consumption_plan;
-        this.fact = dataResp.soe_consumption_fact;
+        dataResp = data;
+        this.limit = dataResp.data.plan;
+        this.fact = dataResp.data.fact;
       }
     );
   }

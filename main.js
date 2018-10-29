@@ -5,15 +5,15 @@ let win;
 function createWindow() {
     // create brouser window
     win = new BrowserWindow({
-       width: 600,
-       height: 600,
+       width: 1180,
+       height: 100,
        backgroundColor: '#ffffff'
     });
 
     win.loadURL(`file://${__dirname}/dist/conlimit/index.html`);
 
     //// uncoment below to open the DevTools
-    win.webContents.openDevTools();
+   // win.webContents.openDevTools();
 
     // Event when the window os closed
     win.on('closed', function () {

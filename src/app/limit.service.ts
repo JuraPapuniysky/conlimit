@@ -10,6 +10,6 @@ export class LimitService {
   }
 
   getLimits() {
-    return this.http.get('http://asutp-ssrem:8088');
+    return this.http.get('http://10.109.71.239:8008/config-numbers/config-number');
   }
 }
