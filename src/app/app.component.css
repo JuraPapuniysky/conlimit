@@ -1,8 +1,10 @@
+
 .main{
-  font:bold 25px/1.5 cursive;
-  color: red;
+  font:bold 35px/1.5 cursive;
+  color: black;
 }
 .value{
-  font: bold 25px/1.5 cursive;
+  font: bold 35px/1.5 cursive;
   color: green;
+  width: 100px;
 }
